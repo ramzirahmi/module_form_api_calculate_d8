@@ -1,0 +1,45 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+function drupal_form_schema() {
+
+    $schema['form_1'] = array(
+        // Example (partial) specification for table "node".
+        'description' => 'The base table for nodes.',
+        'fields' => array(
+            'id' => array(
+                'description' => 'The primary identifier for a node.',
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ),
+            'number_1' => array(
+                'description' => 'first number',
+                'type' => 'int',
+//                'unsigned' => TRUE,
+//                'not null' => TRUE,
+//                'default' => '',
+            ),
+            'number_2' => array(
+                'description' => 'second  number',
+                'type' => 'int',
+//                'length' => 32,
+//                'not null' => TRUE,
+//                'default' => '',
+            ),
+            'somme' => array(
+                'description' => 'somme',
+                'type' => 'int',
+//                'length' => 32,
+//                'not null' => TRUE,
+//                'default' => '',
+            ),
+        ),
+        'primary key' => array(
+            'id',
+        ),
+
+    );
+    return $schema;
+}
